@@ -22,13 +22,20 @@ prompt=ChatPromptTemplate.from_messages(
 
 ## streamlit framework
 
-st.title('Langchain Demo With OPENAI API')
+st.title('Langchain Demo Con OPENAI API')
 input_text=st.text_input("Search the topic u want")
 
-# openAI LLm 
+# openAI LLm
 llm=ChatOpenAI(model="gpt-3.5-turbo")
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
 
 if input_text:
     st.write(chain.invoke({'question':input_text}))
+
+
+### Claves y api keys de este proyecto en el .env
+#   LANGCHAIN_API_KEY=""
+#   OPENAI_API_KEY=""
+#   LANGCHAIN_KEY="Tutorial1"
+###
