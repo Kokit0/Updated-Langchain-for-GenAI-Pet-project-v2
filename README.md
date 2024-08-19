@@ -66,41 +66,38 @@ _____
 ### Configuremos [app.py](http://app.py) y corremos la sesión en host local
 
 - Creamos el archivo llamando las 3 funciones principales encadenadas de nuestro chatbot base.
+- Cargamos requerimientos de modulos y librerías:
+ ![Carga dse Requerimientos](imhjkhage.png)
 - Ejecutamos nuestro app.py
     
-    Terminamos de configurar `app.py` y corremos
-    
-    ![image.png](![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/41b18b88-b122-4242-ace7-eca9c3410c31/image.png))
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/f1c9edfd-2f84-48db-9447-ebaac452a8fd/image.png)
+    Terminamos de configurar `app.py` y corremos    
+    ![Funcion sin errores del código y sus modulos](imhjkhjkage.png)
     
 - nos devuelve la ruta y abre el host en el navegador de pruebas
-    
+![alt text](imhhhhage.png)    
     ```bash
     Local URL: http://localhost:8502
     Network URL: http://192.168.100.30:8502
     ```
     
 - Revisemos la página:
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/c476c202-d2db-4bea-95fe-e290fe9df4be/image.png)
+    ![alt text](<revismos paginaimage.png>)
     
 - Revisemos en el project en el framework de Langchain:
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/1496c885-a368-4922-9d8a-782ccb9943b9/image.png)
+    ![alt text](<revismos paginaimage-1.png>)
     
 - observemos la estructura del output según la definimos:
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/c5ec529b-3b63-4707-a33b-15a95a1800d6/image.png)
+
+    ![alt text](obsestructura.png)
     
 - Observamos en detalle el StrOutputParser:
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/7f5a138f-bc98-44f0-bfc8-12abd0ec9419/image.png)
-    
+
+    ![alt text](observdetalle.png)
+
 - Le consultaremos por “proveer un codigo python que intercambie dos valores” para evaluar costo, tokenizado y timepo de demora para resolver la pregunta:
 - `*proveeme de un código python que swapee 2 valores.*`:
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/500aa81e-1638-49ae-8903-3ebcd519b915/image.png)
+    ![alt text](promptproveemeimage.png)
     
     ```python
     # Definir los dos valores a intercambiar
@@ -124,10 +121,9 @@ _____
 - Por ultimo generamos una consulta común:
     
     “question": "Cuándo comenzar a cepillarle los dientes a los cachorros?”
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/49ef896f-d8d5-4e6c-a143-feeeaa228fba/image.png)
-    
-- 
+
+    ![alt text](questcepillardientes.png)
+        
 
 ### Configuremos una versión Local con Ollama
 
@@ -139,34 +135,32 @@ _____
         ```
         
     - descargamos `llama2`
+    ![alt text](ollamadesc.png)
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/5c03ee7f-4b89-4680-83e5-78a8ce91dd57/image.png)
+    ![alt text](ollamacargandoimage.png)
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/06d369e2-bf95-46ac-a206-cfd6eaac815a/image.png)
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/56dbf2ac-0365-4002-a4d0-723b7552dd2f/image.png)
-    
+    ![alt text](ollamallama2100.png)
+
     - Consultaremos las misma última s 2 preguntas para evaluar el nivel de respuesta, coherencia y consistencia con `Llama2` en comparación con la generada con `gpt3.5 turbo`
     - Miramos las respuestas en navegador de pruebas:
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/cc855a31-07c7-421a-9bb6-e7b4a0671d1f/image.png)
-    
+
+    ![alt text](democonllama2.png)
+
     - Revisemos langsmith en Langchain para revisar el tracing de la consulta, latencia, tokenizados y todo el proceso.
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/83895522-cc82-43e6-a37e-3958c37b1b59/image.png)
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/74c001dd-bd3f-402f-9af3-7c8b8457924f/image.png)
-    
+    ![alt text](revisamoslangchain1.png)
+
+    ![alt text](revisamoslangchain2.png)
+
     - “provide me a python code to swap 2 numbers”
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d3b5efa-f3bc-43d4-8419-583797954756/5d988826-4d0e-49ae-b36d-5ed7041fa8d0/image.png)
+
+    ![alt text](providepythoncodellama2.png)
     
     - como vemos el tiempo de proceso y generación de la respuesta
     - Fue muchísimo más alta, además el tokenizado se disparó rápidamente a 388 tokens.
     - El tamaño y extensión de la respuesta es generada por la pregunta, pero mucho más. Y el nivel de información y completitud también lo es, lo que supone que el modelo OpenAI Intento responder con brevedad y precisión, sin extenderse en detalles semánticos mientras que el modelo funciona.
     - Lama 2 fue mucho más verbal o verborreico y con un impacto asociado al tiempo de proceso local que depende del computador en el que esté corriendo el modelo y la inteligencia detrás de la respuesta generada por el modelo mismo.
 _____
-## Características
+## Características generales del projecto
 
 - Integración con los modelos GPT de OpenAI
 - Soporte de LLM local usando Ollama (Llama2)
