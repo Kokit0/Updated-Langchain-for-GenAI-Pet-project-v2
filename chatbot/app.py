@@ -9,7 +9,7 @@ import os
 from dotenv import load_dotenv
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-## Langsmith tracking (super util para traquear lo que hagamos)
+## Langsmith tracing (super util para trackear lo que hagamos)
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 

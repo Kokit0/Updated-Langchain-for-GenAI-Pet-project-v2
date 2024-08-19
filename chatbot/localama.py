@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+## Langsmith tracing (super util para trackear lo que hagamos)
 os.environ["LANGCHAIN_TRACING_V2"]="true"
 os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
 
@@ -21,13 +22,18 @@ prompt=ChatPromptTemplate.from_messages(
 )
 ## streamlit framework
 
-st.title('Langchain Demo With LLAMA2 API')
-input_text=st.text_input("Search the topic u want")
+st.title('Langchain Demo Con LLAMA2 API')
+input_text = st.text_input("Busca sobre el tópico que tu quieras")
 
-# ollama LLAma2 LLm 
+# ollama LLAma2 LLm
 llm=Ollama(model="llama2")
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
 
 if input_text:
     st.write(chain.invoke({"question":input_text}))
+
+
+"""
+Desarrollado por Jorge Amaya S. 2024
+"""
