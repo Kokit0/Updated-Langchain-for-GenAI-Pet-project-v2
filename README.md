@@ -27,7 +27,7 @@ Si. Todas las API están secretas, con acceso de usuario restringido y anonimiza
 - Chains
 - Chatbots
 - GROQ (lenguaje de consulta)
-- Modelos de Hugging Face
+- Modelos de Hugging Face22
 - ObjectBox (base de datos embebida)
 - Modelos de OpenAI
 - Modelos Meta Llama2 (open source)
